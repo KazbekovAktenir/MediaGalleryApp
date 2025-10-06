@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Массив картинок -->
+    <array name="gallery_images">
+        <item>@drawable/img1</item>
+        <item>@drawable/img2</item>
+        <item>@drawable/img3</item>
+        <item>@drawable/img4</item>
+        <item>@drawable/img5</item>
+    </array>
+
+    <!-- Массив подписей к изображениям -->
+    <string-array name="gallery_captions">
+        <item>Красивый закат</item>
+        <item>Человек-Паук</item>
+        <item>aххааххахахахх</item>
+        <item>Каменное лицо</item>
+        <item>Привет друзья</item>
+    </string-array>
+
+    <!-- Массив треков -->
+    <array name="player_sounds">
+        <item>@raw/sound1</item>
+        <item>@raw/sound2</item>
+        <item>@raw/sound3</item>
+        <item>@raw/sound4</item>
+        <item>@raw/sound5</item>
+    </array>
+</resources>

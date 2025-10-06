@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_gallery"
+        android:title="📸 Галерея"
+        android:icon="@android:drawable/ic_menu_gallery"/>
+    <item
+        android:id="@+id/nav_player"
+        android:title="🎵 Плеер"
+        android:icon="@android:drawable/ic_media_play"/>
+</menu>

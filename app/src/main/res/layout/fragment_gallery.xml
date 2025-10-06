@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Заголовок галереи -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="📸 Галерея изображений"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_700"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"/>
+
+    <!-- Контейнер для изображения с тенью -->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:elevation="8dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="380dp"
+            android:layout_height="380dp"
+            android:src="@drawable/img1"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:background="@color/white"
+            android:padding="4dp"/>
+    </FrameLayout>
+
+    <!-- Подпись к изображению -->
+    <TextView
+        android:id="@+id/textCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Красивый закат"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_700"
+        android:gravity="center"
+        android:padding="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"/>
+
+    <!-- Первая строка кнопок -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnPrev"
+            android:layout_marginEnd="10dp"
+            android:text="◀ Пред."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@color/white"
+            android:minWidth="80dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/teal_700"
+            android:text="След. ▶"
+            android:textColor="@color/white"
+            android:minWidth="80dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnRandom"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@null"
+            android:padding="8dp"
+            android:text=""
+            android:foreground="@drawable/iconrandom"
+            android:backgroundTint="@null"/>
+
+    </LinearLayout>
+
+    <!-- Информация о текущем изображении -->
+    <TextView
+        android:id="@+id/textImageInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Изображение 1 из 5"
+        android:textSize="14sp"
+        android:textColor="@color/purple_700"
+        android:gravity="center"/>
+</LinearLayout>
