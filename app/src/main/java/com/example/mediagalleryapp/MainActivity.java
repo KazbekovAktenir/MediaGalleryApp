@@ -66,19 +66,30 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupLandscapeMode() {
-        // Скрываем навигацию в горизонтальной ориентации
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         if (bottomNav != null) {
             bottomNav.setVisibility(View.GONE);
         }
 
-        // Очищаем контейнер и добавляем оба фрагмента
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.fragment_container, galleryFragment)
-                .add(R.id.fragment_container, playerFragment)
-                .commit();
+        // Проверяем, что контейнеры существуют (только в landscape layout)
+        View galleryContainer = findViewById(R.id.gallery_container);
+        View playerContainer = findViewById(R.id.player_container);
+        
+        if (galleryContainer != null && playerContainer != null) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.gallery_container, galleryFragment)
+                    .replace(R.id.player_container, playerFragment)
+                    .commit();
+        } else {
+            // Fallback: если контейнеры не найдены, используем основной контейнер
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, galleryFragment)
+                    .commit();
+        }
     }
+
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {

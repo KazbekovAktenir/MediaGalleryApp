@@ -6,184 +6,19 @@
     android:background="@color/white">
 
     <!-- Левая часть - Галерея -->
-    <LinearLayout
+    <FrameLayout
+        android:id="@+id/gallery_container"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:padding="16dp"
-        android:background="@color/purple_200">
-
-        <!-- Заголовок галереи -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="📸 Галерея"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="@color/purple_700"
-            android:layout_marginBottom="12dp"
-            android:gravity="center"/>
-
-        <!-- Контейнер для изображения -->
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:elevation="4dp">
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:src="@drawable/img1"
-                android:contentDescription="@string/app_name"
-                android:scaleType="centerCrop"
-                android:background="@color/white"
-                android:padding="2dp"/>
-        </FrameLayout>
-
-        <!-- Подпись к изображению -->
-        <TextView
-            android:id="@+id/textCaption"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Красивый закат"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:textColor="@color/purple_700"
-            android:gravity="center"
-            android:background="@color/white"
-            android:padding="4dp"
-            android:paddingStart="8dp"
-            android:paddingEnd="8dp"/>
-
-        <!-- Кнопки галереи -->
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_marginTop="12dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:id="@+id/btnPrev"
-                android:layout_marginEnd="6dp"
-                android:text="◀"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:backgroundTint="@color/purple_500"
-                android:textColor="@color/white"
-                android:textSize="12sp"/>
-
-            <Button
-                android:id="@+id/btnNext"
-                android:layout_marginEnd="6dp"
-                android:text="▶"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:backgroundTint="@color/teal_700"
-                android:textColor="@color/white"
-                android:textSize="12sp"/>
-
-            <Button
-                android:id="@+id/btnRandom"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@null"
-                android:padding="4dp"
-                android:text=""
-                android:foreground="@drawable/iconrandom"
-                android:backgroundTint="@null"/>
-        </LinearLayout>
-
-        <!-- Информация о текущем изображении -->
-        <TextView
-            android:id="@+id/textImageInfo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Изображение 1 из 5"
-            android:textSize="12sp"
-            android:textColor="@color/purple_700"
-            android:gravity="center"/>
-    </LinearLayout>
+        android:layout_weight="1" />
 
     <!-- Правая часть - Плеер -->
-    <LinearLayout
+    <FrameLayout
+        android:id="@+id/player_container"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:padding="16dp"
-        android:background="@color/teal_200">
+        android:layout_weight="1" />
 
-        <!-- Заголовок плеера -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="🎵 Плеер"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="@color/teal_700"
-            android:layout_marginBottom="12dp"
-            android:gravity="center"/>
-
-        <!-- Информация о треке -->
-        <TextView
-            android:id="@+id/textTrackInfo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Трек 1 из 5"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="@color/teal_700"
-            android:gravity="center"
-            android:background="@color/white"
-            android:padding="8dp"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"/>
-
-        <!-- Кнопка воспроизведения -->
-        <Button
-            android:id="@+id/btnPlay"
-            android:layout_marginTop="16dp"
-            android:text="▶ Воспроизвести"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/teal_700"
-            android:textColor="@color/white"
-            android:minWidth="120dp"/>
-
-        <!-- Кнопки переключения треков -->
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_marginTop="12dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:id="@+id/btnPrevTrack"
-                android:layout_marginEnd="8dp"
-                android:text="◀ Пред."
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/teal_500"
-                android:textColor="@color/white"
-                android:minWidth="70dp"
-                android:textSize="12sp"/>
-
-            <Button
-                android:id="@+id/btnNextTrack"
-                android:text="След. ▶"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/teal_500"
-                android:textColor="@color/white"
-                android:minWidth="70dp"
-                android:textSize="12sp"/>
-        </LinearLayout>
-    </LinearLayout>
 </LinearLayout>
+
+
